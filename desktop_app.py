@@ -138,10 +138,9 @@ def webcam_input(model, hcb):
                 print(len(results.multi_hand_landmarks))
                 if hch.is_right(message):
                     print('Right')
-                    cv2.putText(image, "Right", (100, 300), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 50, 50), 4)
+                    #cv2.putText(image, "Right", (100, 300), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 50, 50), 4)
                 else:
                     print('Left')
-                # TODO:
 
                 result = hch.get_result(model=model, handlandmarks=results.multi_hand_landmarks[0],
                                         is_R=hch.is_right(message))

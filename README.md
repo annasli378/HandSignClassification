@@ -23,6 +23,14 @@ Arabic Sign Language Recognition (ArSL) Approach Using Support Vector Machine,
 ## Project
 The goal of the project is to use a classifier that enables recognition of the sign shown to the device's camera in applications that can then be used for sign language learning, verification and classification of the signs shown.
 
+### Desktop app
+
+
+### Web app
+
+
+### Mobile
+
 
 
 

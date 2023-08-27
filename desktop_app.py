@@ -1,32 +1,13 @@
 import tkinter
 import tkinter.font as tkFont
-
+from tkinter import *
+from PIL import Image, ImageTk
 import cv2
 import mediapipe as mp
-
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 from logic import HandClassifierHandler
-from PyQt5 import QtWidgets
-import sys
-
-from PyQt5.QtWidgets import *
-from PyQt5.QtMultimedia import *
-from PyQt5.QtMultimediaWidgets import *
-
-
-
-from tkinter import *
-from PIL import Image, ImageTk
-import cv2
-from tkinter import filedialog
-
-from logic import MainWindow
-
-#app = MainWindow.MainWidnow()
-#app.set_window(model=model, hch = hch)
-
 
 
 def desktop_app(model, hch):
@@ -41,8 +22,8 @@ def desktop_app(model, hch):
     win.configure(bg=bg_color1)
     w = 400
     h = 300
-    frame_1 = Frame(win, width=600, height=320, bg=bg_color2).place(x=0, y=0)
-    v = Label(frame_1, width=w, height=h)
+    frame = Frame(win, width=600, height=320, bg=bg_color2).place(x=0, y=0)
+    v = Label(frame, width=w, height=h)
     v.place(x=10, y=10)
     cap = cv2.VideoCapture(0)
     # display text:
@@ -110,7 +91,7 @@ def desktop_app(model, hch):
     win.mainloop()
 
 
-def webcam_input(model, hcb):
+def widnow_view_opencv(model, hch):
     # https://github.com/google/mediapipe/blob/master/docs/solutions/hands.md
     cap = cv2.VideoCapture(0)
     with mp_hands.Hands(
@@ -153,19 +134,16 @@ def webcam_input(model, hcb):
                         mp_hands.HAND_CONNECTIONS,
                         mp_drawing_styles.get_default_hand_landmarks_style(),
                         mp_drawing_styles.get_default_hand_connections_style())
-
             # Flip the image horizontally for a selfie-view display.
             cv2.imshow('MediaPipe Hands', cv2.flip(image, 1))
             if cv2.waitKey(5) & 0xFF == 27:
                 break
     cap.release()
 
-
 ########################################################################################################################
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # setup
     hch = HandClassifierHandler.HandClassifierHandler()
     model = hch.load_model()
-
+    # run desktop app
     desktop_app(model, hch)

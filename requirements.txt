@@ -1,0 +1,10 @@
+flask
+open-cv
+mediapipe
+pickle
+sklearn
+tkinter
+PIL
+numpy
+os
+pytest

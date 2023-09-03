@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div style="width: 95%;">
+        <div style="width: 50%; height: 100px; float: left; "> Left Hand </div>
+        <div style="margin-left: 50%; height: 100px; "> Right Hand </div>
+
+        <div style="width: 50%; height: 100px; float: left; " id="left_res">{{ left_result }} </div>
+        <div style="margin-left: 50%; height: 100px; " id="right_res">{{right_result}}</div>
+
+        <script type="text/javascript">
+        var interval = setInterval(update_values, 250);
+        function update() {
+        $.getJSON($SCRIPT_ROOT + '/results',
+            function(data) {
+                $('#result').text(data.result);
+                console.log(data)
+            });
+        };
+
+
+
+        <!--function update() {
+            let docL = document.getElementById("left_res");
+            let docR = document.getElementById("left_res");
+
+            fetch("/result").then(
+                response => response.json()
+            ).then(
+                function(data) {
+                    console.log(data["now"]);
+                    doc.innerText = data["now"];
+            });
+        }-->
+        </script>
+
+        <body onload="update();">
+        <p>
+            <span id = "result">?</span>
+        </p>
+        </body>
+
+
+    </div>
+</head>
+</html>

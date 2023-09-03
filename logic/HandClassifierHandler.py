@@ -160,7 +160,7 @@ class HandClassifierHandler:
             return -1
         else:
             result = model.predict(line)
-            print(self.result_parser(result=result))
+            #print(self.result_parser(result=result))
             return result
 
     def result_parser(self, result):

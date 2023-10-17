@@ -55,22 +55,38 @@ doi: 10.1109/ICCTA43079.2017.9497164.
 ### Dataset
 Dataset for learning classyfier consisted of 29 945 images, divided in 29 classes. Those classes were:
 
-TODO: table
+| Sign from PSL      | Class label | Sign from PSL           | Class label |
+|--------------------|-------------|-------------------------|-------------|
+| number 0, letter O | 0           | letter M                | 15          |
+| number 1           | 1           | letter N                | 16          |
+| number 2           | 2           | letter P                | 17          |
+| number 3           | 3           | letter R                | 18          |
+| number 4           | 4           | letter S                | 19          |
+| number 5           | 5           | letter U                | 20          |
+| letter A           | 6           | letter W                | 21          |
+| letter B           | 7           | letter Y                | 22          |
+| letter C           | 8           | additional character Aw | 23          |
+| letter D           | 9           | additional character Bk | 24          |
+| letter E           | 10          | additional character Cm | 25          |
+| letter F and T     | 11          | additional character Ik | 26          |
+| letter H           | 12          | additional character Om | 27          |
+| letter I and J     | 13          | additional character Um | 28          |
+| letter L           | 14          |                         |             |
 
+To learn more about Polish Sign Language visit those sites :)
+https://kulturawrazliwa.pl/cykl/lekcje-online-pjm/
+https://www.spreadthesign.com/pl.pl/search/
+https://www.slownikpjm.uw.edu.pl
+https://cwn.uph.edu.pl/dictlessons_thema1P
 
 
 ### Data pre-processing
 
-![HR_CAM](https://github.com/annasli378/HandSignClassification/blob/main/images/schemat_analiza_modelu(1).png)
-
+![schema](https://github.com/annasli378/HandSignClassification/blob/main/images/schema.png)
 
 ### Model parameters
 
-Random Forest classifier
-
-
-
-
+For classifing our normalized data we used Random Forest (more info here: https://github.com/annasli378/ChoosingModelForPSLRecognition)
 
 
 <!-- GETTING STARTED -->
@@ -91,28 +107,9 @@ To build this project, you require:
 
 ## Bibliography
 
-https://arxiv.org/abs/1312.6034  <br>
-`Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps
-Scott M. Lundberg, Su-In Lee`
-
-
-
-
 
 
 
 
 <!-- README created using the following template -->
 <!-- https://github.com/othneildrew/Best-README-Template -->
-
-
-
-
-
-
-
-
-
-
-
-

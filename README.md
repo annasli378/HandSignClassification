@@ -1,4 +1,4 @@
-# Application with Pilish Sign Language Recognition
+# Application with Polish Sign Language Recognition
 
 <!-- PROJECT LOGO -->
 <br />

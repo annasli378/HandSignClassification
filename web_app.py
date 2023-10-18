@@ -27,8 +27,8 @@ def get_frames():
     with mp_hands.Hands(
             model_complexity=0,
             max_num_hands=2,
-            min_detection_confidence=0.7,
-            min_tracking_confidence=0.7) as hands:
+            min_detection_confidence=0.75,
+            min_tracking_confidence=0.75) as hands:
 
         while True:
             success, image = camera.read()
@@ -67,7 +67,7 @@ def get_frames():
 
                 image = cv2.flip(image, 1)
                 h, w = image.shape[0], image.shape[1]
-                image = cv2.putText(image, right_hand_result, (10, h-10), cv2.FONT_HERSHEY_SIMPLEX, 1, color=(40,44,52), )
+                image = cv2.putText(image, right_hand_result, (10, h-10), cv2.FONT_HERSHEY_SIMPLEX, 1, color=(0,0,0), )
                 image = cv2.putText(image, left_hand_result, (w-30, h-10), cv2.FONT_HERSHEY_SIMPLEX, 1, color=(40,44,52))
 
                 ret, buffer = cv2.imencode('.jpg', image)
@@ -87,11 +87,7 @@ def video():
     return Response(get_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
-@app.route('/results', methods=['GET'])
-def results():
-    text_right = right_hand_result
-    text_left = left_hand_result
-    return jsonify(result=[text_left, text_right])
+
 
 
 # @app.route('/results_left')

@@ -74,13 +74,19 @@ Dataset for learning classyfier consisted of 29 945 images, divided in 29 classe
 | letter L           | 14          |                         |             |
 
 To learn more about Polish Sign Language visit those sites :)
+
 https://kulturawrazliwa.pl/cykl/lekcje-online-pjm/
+
 https://www.spreadthesign.com/pl.pl/search/
+
 https://www.slownikpjm.uw.edu.pl
+
 https://cwn.uph.edu.pl/dictlessons_thema1P
 
 
 ### Data pre-processing
+
+Preprocessing of raw data from MediaPipe library to classification is shown below:
 
 ![schema](https://github.com/annasli378/HandSignClassification/blob/main/img/preproc.png)
 
@@ -96,7 +102,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 To build this project, you require:
-* Python with installed the required libraries
+* Python with installed the required libraries: flask (for web app), open-cv, mediapipe, pickle, sklearn, tkinter (for desktop app), PIL, numpy, os, pytest
 
 ### Installation
 1. Clone the repo
@@ -104,8 +110,12 @@ To build this project, you require:
    git clone https://github.com/annasli378/HandSignClassification.git
    ```
 2. Open project in python environment (i.e PyCharm)
+3. Run 'web_app.py' for web application or 'desktop_app.py' for destop application
+
 
 ## Bibliography
+https://developers.google.com/mediapipe
+
 
 
 

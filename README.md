@@ -13,10 +13,10 @@ The goal of the project is to create a system with a classifier that enables rec
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#dataset">MediaPipe for sign languages recognition</a></li>
-        <li><a href="#models">Dataset</a></li>
-        <li><a href="#saliency-methods">Data pre-processing</a></li>
-        <li><a href="#saliency-based-evaluation">Model parameters</a></li>
+        <li><a href="#mediapipe-for-sign-languages-recognition">MediaPipe for sign languages recognition</a></li>
+        <li><a href="#dataset">Dataset</a></li>
+        <li><a href="#data-pre-processing">Data pre-processing</a></li>
+        <li><a href="#model-parameters">Model parameters</a></li>
       </ul>
     </li>
     <li>
@@ -82,7 +82,7 @@ https://cwn.uph.edu.pl/dictlessons_thema1P
 
 ### Data pre-processing
 
-![schema](https://github.com/annasli378/HandSignClassification/blob/main/images/schema.png)
+![schema](https://github.com/annasli378/HandSignClassification/blob/main/img/preproc.png)
 
 ### Model parameters
 
